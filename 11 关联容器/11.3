@@ -1,0 +1,20 @@
+#include <deque>
+#include <map>
+
+using namespace std;
+
+int main() 
+{
+	map<string, size_t> count;
+	string s;
+	int flag = 0;
+	while (cin >> s && flag == 0) {
+		++count[s];
+		cout << "是否继续输入" << endl;
+		cin >> flag;
+	}
+	for (auto x : count) {
+		cout << x.first << " occurs "<< x.second << "times" <<endl;
+	}
+	return 0;
+}
